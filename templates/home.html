@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>My MPG Predictor Model</h1>
+<img id='car1' src="https://www.jamesedition.com/stories/wp-content/uploads/2018/02/8f35ba26fe296e36b3a96ee5416259b4.jpg">
+
+<h2>The Data</h2>
+<p>I created a pipeline to scrape all the most recent and comprehensive car data I could find.
+  Features include: horsepower, cylinders, displacement, country of origin and more.</p>
+<h2>The Model</h2>
+<p>I trained a random forest regressor to predict mpg from the remaining features.
+<br>
+
+<a href="{{url_for('predict')}}">Try it out yourself</a>
+{% endblock content %}

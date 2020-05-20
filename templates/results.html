@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block content %}
+      <img src="{{ image }}"/>
+      <br>
+      Predicted mpg: {{prediction_str}}
+      <br>
+      Percentile: {{percentile}}
+{% endblock content %}

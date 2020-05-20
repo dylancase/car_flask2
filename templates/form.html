@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+    <form action='#' method = 'post'>
+      <p class = 'form-inputs'>
+        <label for='cyl'>Cylinders: </label>
+        <select name='cyl' id='cyl'>
+          {% for each in cylinder_options %}
+            <option value="{{each}}">{{each}}</option>
+          {% endfor %}
+        </select>
+      </p>
+      <p class = 'form-inputs'>
+        <label for='disp'>Displacement: </label>
+        <input type='text' name = 'disp' id='disp'/>
+      </p>
+      <p class = 'form-inputs'>
+        <label for='hp'>Horsepower: </label>
+        <input type='text' name = 'hp' id='hp'/>
+      </p>
+      <p class = 'form-inputs'>
+        <label for='weight'>Weight: </label>
+        <input type='text' name = 'weight' id='weight'/>
+      </p>
+      <p class = 'form-inputs'>
+        <label for='weight'>Acceleration: </label>
+        <input type='text' name = 'acceleration' id='accleration'/>
+      </p>
+
+      <p class = 'form-inputs'>
+        <label for='year'>Year: </label>
+        <input type='text' name = 'year' id='year'/>
+      </p>
+
+      <p class = 'form-inputs'>
+        <label for='origin'>Origin: </label>
+        <select name='origin' id='origin'>
+          {% for each in origin_options %}
+            <option value={{loop.index}}>{{each}}</option>
+          {% endfor %}
+        </select>
+      </p>
+      <p> <input type='submit' value='Submit'/></p>
+    </form>
+{% endblock content %}
